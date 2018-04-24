@@ -595,7 +595,7 @@ if (NOT TARGET dlib)
             list(APPEND CUDA_NVCC_FLAGS "-arch=sm_30;-D__STRICT_ANSI__;-D_MWAITXINTRIN_H_INCLUDED;-D_FORCE_INLINES;${FLAGS_FOR_NVCC}")
             list(APPEND CUDA_NVCC_FLAGS ${active_preprocessor_switches})
             if (NOT MSVC)
-               list(APPEND CUDA_NVCC_FLAGS "-std=c++11")
+               #list(APPEND CUDA_NVCC_FLAGS "-std=c++11")
             endif()
             if (CMAKE_POSITION_INDEPENDENT_CODE)
                # sometimes this setting isn't propagated to NVCC, which then causes the
